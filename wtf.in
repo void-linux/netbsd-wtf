@@ -79,7 +79,7 @@ for i; do
 
 	# Try xbps-repo(8) as last resort.
 	ans="$(xbps-repo search "$i" 2>/dev/null|sed -e "s/From.*//g;/^$/d")"
-	if [ $? -eq 0 ]; then
+	if [ $? -eq 0 -a -n "$ans" ]; then
 		echo "$i:\n$ans"
 		continue
 	fi
