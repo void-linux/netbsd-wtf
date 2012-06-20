@@ -70,15 +70,17 @@ for i; do
 	fi
 
 	# Try xbps-bin(8) next
-	ans="$(xbps-bin show "$i" 2>/dev/null)"
+	pkgver="$(xbps-bin show -opkgver "$i" 2>/dev/null)"
 	if [ $? -eq 0 ]; then
-		echo "$i: $ans"
+		sd="$(xbps-bin show -oshort_desc "$i" 2>/dev/null)"
+		echo "$i: $sd [from pkg $pkgver]"
 		continue
 	fi
+
 	# Try xbps-repo(8) as last resort.
-	ans="$(xbps-repo show "$i" 2>/dev/null)"
+	ans="$(xbps-repo search "$i" 2>/dev/null|sed -e "s/From.*//g;/^$/d")"
 	if [ $? -eq 0 ]; then
-		echo "$i: $ans"
+		echo "$i:\n$ans"
 		continue
 	fi
 
