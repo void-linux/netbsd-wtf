@@ -1,0 +1,7 @@
+NetBSD's wtf(6) command for Void Linux
+======================================
+
+The wtf utility displays the expansion of the acronyms specified on the
+command line.  If the acronym is not in any of the acronyms databases,
+wtf will check to see if the acronym is known by whatis(1), xbps-bin(8),
+or xbps-repo(8) show commands.
