@@ -47,33 +47,10 @@ for i; do
 		ans="$(fgrep -h "$target" $acronyms 2>/dev/null \
 		    | sed -ne "\|^$target[[:space:]]|s|^$target[[:space:]]*||p")"
 		if [ -n "$ans" ] ; then
-			echo "$(basename $acronyms) database"
-			echo "-----------------"
 			echo "$target: $ans"
-			echo
 			found=1
 		fi
 	fi
-	# Try apropos(1) next
-	ans="$(apropos "$i" 2>/dev/null)"
-	if [ $? -eq 0 ]; then
-		echo "apropos(1)"
-		echo "----------"
-		echo "$ans" | sort -u
-		echo
-		found=1
-	fi
-
-	# Try xbps-query(8) as last resort.
-	ans="$(xbps-query -s "$i" 2>/dev/null|sed -e "/^$/d")"
-	if [ $? -eq 0 -a -n "$ans" ]; then
-		echo "xbps-query(8)"
-		echo "-------------"
-		echo "$ans"
-		echo
-		found=1
-	fi
-
 	# Give up!
 	if [ -z "$found" ]; then
 		echo "$PROGNAME: I don't know what \`$i' means!" 1>&2

@@ -2,7 +2,7 @@
 .\"
 .\" Public Domain
 .\"
-.Dd December 16, 2012
+.Dd March 11, 2013
 .Dt WTF 6
 .Os
 .Sh NAME
@@ -18,12 +18,6 @@ The
 .Nm
 utility displays the expansion of the acronyms
 specified on the command line.
-If the acronym is not in any of the acronyms databases,
-.Nm
-will check to see if the acronym is known by
-.Xr apropos 1
-or
-.Xr xbps-query 8 .
 .Pp
 If
 .Dq is
@@ -51,17 +45,12 @@ The files must be in the proper format (acronym[tab]meaning).
 .El
 .Sh FILES
 .Bl -tag -width /usr/share/misc/acronyms.XXXX -compact
-.It Pa /usr/share/misc/acronyms
+.It Pa /usr/share/wtf/acronyms
 default acronym database.
-.It Pa /usr/share/misc/acronyms.comp
+.It Pa /usr/share/wtf/acronyms.comp
 computer-related acronym database.
 .El
-.Sh SEE ALSO
-.Xr make 1 ,
-.Xr apropos 1 ,
-.Xr xbps-query 8 .
 .Sh HISTORY
 .Nm
 first appeared in
-.Nx 1.5 ,
-and was adapted for Void Linux in 2012.
+.Nx 1.5 .
