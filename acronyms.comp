@@ -1049,6 +1049,7 @@ SMI	system management interrupt
 SMI	structure of management information
 SMM	system management mode
 SMP	symmetric multiprocessing
+SMPP Short Message Peer-to-Peer
 SMT	simultaneous multithreading
 SMTP	simple mail transfer protocol
 SMU	system management unit
