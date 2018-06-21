@@ -1,20 +1,23 @@
 #!/bin/sh
 #
-#	$NetBSD: wtf,v 1.17 2012/04/26 03:16:13 christos Exp $
+#	$NetBSD: wtf,v 1.24 2018/03/07 08:25:43 eadler Exp $
 #
 # Public domain
 #
 
 PROGNAME="$(basename "$0")"
+offensive=false
 
 usage() {
-	echo "Usage: $PROGNAME [-f dbfile] [is] <acronym>"
+	echo "usage: $PROGNAME [-o] [-f dbfile] [is] term ..."
 	exit 1
 }
 
-while getopts f: f
+while getopts f:o f
 do
 	case "$f" in
+	o)	offensive=true
+		;;
 	f)
 		acronyms="$OPTARG $acronyms"
 		;;
@@ -27,7 +30,9 @@ done
 shift "$(expr "$OPTIND" - 1)"
 
 if [ "$1" = "is" ]; then
-	shift
+	if [ $# -gt 1 ] ; then
+		shift
+	fi
 fi
 
 if [ -z "$1" ]; then
@@ -35,26 +40,50 @@ if [ -z "$1" ]; then
 fi
 
 if [ -z "$acronyms" ]; then
-	acronyms=${ACRONYMDB:-$(ls @@ACRONYMSDIR@@/acronyms* 2>/dev/null)}
+	if [ -z "$ACRONYMDB" ]; then
+		for f in @@ACRONYMSDIR@@/acronyms*; do
+			case $f in
+			*-o)
+				if $offensive; then
+					acronyms="$acronyms $f"
+				fi
+				;;
+			*)
+				acronyms="$acronyms $f"
+				;;
+			esac
+		done
+	else
+		acronyms="$ACRONYMDB"
+	fi
 fi
+
+if [ -z "$acronyms" ]; then
+	echo "$PROGNAME: acronym database not found!" >&2
+	exit 1
+fi
+
+
+for f in $acronyms; do
+	if [ ! -f "$f" ]; then
+		echo "$PROGNAME: cannot open acronym database file \`$f'" >&2
+		exit 1
+	fi
+done
 
 rv=0
 for i; do
-	unset found
-	if [ -n "$acronyms" ]; then
-		# Search acronyms list first
-		target="$(echo "$i" | tr '[a-z]' '[A-Z]')"
-		ans="$(fgrep -h "$target" $acronyms 2>/dev/null \
-		    | sed -ne "\|^$target[[:space:]]|s|^$target[[:space:]]*||p")"
-		if [ -n "$ans" ] ; then
-			echo "$target: $ans"
-			found=1
-		fi
+	# Search acronym list first
+  target="$(echo "$i" | tr '[:lower:]' '[:upper:]')"
+	ans="$(fgrep -h "$target" $acronyms 2>/dev/null \
+	     | sed -ne "\|^$target[[:space:]]|s|^$target[[:space:]]*||p")"
+	if [ -n "$ans" ] ; then
+		echo "$target: $ans"
+		continue
 	fi
+
 	# Give up!
-	if [ -z "$found" ]; then
-		echo "$PROGNAME: I don't know what \`$i' means!" 1>&2
-		rv=1
-	fi
+	echo "$PROGNAME: I don't know what \`$i' means!" 1>&2
+	rv=1
 done
 exit $rv
