@@ -1,4 +1,4 @@
-$NetBSD: acronyms,v 1.274 2018/05/25 00:31:07 riastradh Exp $
+$NetBSD: acronyms,v 1.312 2021/09/16 08:33:24 leot Exp $
 10Q	thank you
 10X	thanks
 1337	elite ("leet")
@@ -9,6 +9,7 @@ A/S/L	age/sex/location
 AAMOF	as a matter of fact
 ABD	all but dissertation
 AC	audible chuckle
+ACAB	all cats are beautiful
 ADD	attention deficit disorder
 ADHD	attention deficit (and) hyperactivity disorder
 ADN	any day now
@@ -31,9 +32,11 @@ AISE	as I see it
 AIU	as I understand
 AIUI	as I understand it
 AKA	also known as
+ALPR	automatic license plate recognition
 AM	ante meridiem
 AMA	ask me anything
 AMOL	a mountain of love
+ANPR	automatic number plate recognition
 APM	alternative payment model
 ASAIC	as soon as I can
 ASAP	as soon as possible
@@ -42,6 +45,8 @@ ATEOTD	at the end of the day
 ATM	at the moment
 ATM	{automated,automatic} teller machine
 ATW	around the world
+ABV	alcohol by volume
+AVI	automatic vehicle identification
 AWK	Aho, Weinberger, [and] Kernighan
 AWOL	absent without official leave
 AYBABTU	all your base are belong to us
@@ -54,6 +59,7 @@ B/W	bandwidth
 B/W	between
 BAI	goodbye
 BAK	back at keyboard
+BAU	business as usual
 BBIAB	be back in a bit
 BBL	[I'll] be back later
 BBR	burnt beyond repair
@@ -62,6 +68,7 @@ BBT	be back tomorrow
 BCNU	be seeing you
 BCNUL8R	be seeing you later
 BCP	best current practice
+BDFL	benevolent dictator for life
 BF	best friend
 BF	boyfriend
 BFF	best {friend,friends} forever
@@ -90,13 +97,17 @@ CFV	call for votes
 CFY	calling for you
 CG	center of gravity
 CHANOPS	channel operator status
+CIA	central intelligence agency
 CMIIW	correct me if I'm wrong
 CNP	continued [in my] next post
 COB	close of business [day]
 COTS	commercial off-the-shelf
+CPA	cyproterone acetate
 CPC	cost per click
 CPE	customer premises equipment
+CPR	car plate recognition
 CRM	customer relationship management
+CTF	capture the flag
 CTN	can't talk now
 CU	see you
 CUL	see you later
@@ -107,6 +118,7 @@ D/B/A	doing business as
 D/L	download
 DBA	doing business as
 DBEYR	don't believe everything you read
+DC	Dreamcast
 DIAFYO	did I ask for your opinion?
 DIY	do it yourself
 DKDC	don't know, don't care
@@ -119,15 +131,20 @@ DND	do not disturb
 DNF	did not finish
 DNFT	do not feed troll
 DOA	dead on arrival
+DOTADIW	do one thing and do it well
 DRY	don't repeat yourself
+DS	Dual Screen
 DSTM	don't shoot the messenger
 DTRT	do the right thing
 DTWT	do the wrong thing
+DW	don't worry
 DWIM	do what I mean
+DYAC	damn you autocorrect
 DYK	do you know?
 EA	early adopter
 ECR	electronic cash register
 EDS	eternal downward spiral
+EEE	eastern equine encephalitis
 EFT	electronic funds transfer
 EG	evil grin
 EIE	enough is enough
@@ -137,7 +154,6 @@ EOD	end of {day,discussion}
 EOL	end of life
 EOM	end of message
 EOS	end of story
-EOW	end of world
 ETA	edited to add
 ETA	estimated time of arrival
 ETLA	extended three letter acronym
@@ -157,6 +173,8 @@ FNO	from now on
 FOC	free of charge
 FPS	first person shooter
 FPS	frames per second
+FQA	frequently questioned answer
+FRAND	fair, reasonable, and non-discriminatory
 FSDO	for some definition of
 FSVO	for some value of
 FTBFS	fails to build from source
@@ -178,9 +196,16 @@ G2K	good to know
 GA	go ahead
 GAC	get a clue
 GAL	get a life
+GB	Game Boy
+GBA	Game Boy Advance
+GBC	Game Boy Color
 GBTW	get back to work
+GC	GameCube
+GCD	greatest common divisor
+GCHQ	Government Communications Headquarters (UK)
 GDPR	General Data Protection Regulation
 GF	girlfriend
+GFCI	ground-fault circuit interrupter
 GFU	good for you
 GFY	good for you
 GG	good game
@@ -326,14 +351,19 @@ LMSO	laughing my socks off
 LOIC	low orbit ion cannon
 LOL	laughing out loud
 LP	long playing [record]
+LPR	license plate recognition
+LSD	lysergic acid diethylamide
 LTNS	long time no see
 LWYL	laugh with you later
 M&O	management & operations
 M8	mate
 MAD	mutually assured destruction
 MBA	master of business administration
+MD	Mega Drive
+MDMA	methylenedioxy methamphetamine
 MFW	my face when
 MIA	missing in action
+MLPR	mobile license plate reader
 MMB	message me back
 MO	modus operandi
 MOTAS	member of the appropriate sex
@@ -350,8 +380,11 @@ NB	nota bene
 NBD	no big deal
 NE1	anyone
 NEDM	not even Doom music
+NES	Nintendo Entertainment System
 NFA	no flaming allowed
 NFC	no functional change
+NGP	Neo Geo Pocket
+NGPC	Neo Geo Pocket Color
 NIFOC	naked in front of computer
 NIH	not invented here
 NIMBY	not in my backyard
@@ -373,6 +406,7 @@ NTBF	not to be fixed
 NTN	no thanks needed
 NUNP	no users, no problems
 NVM	never mind
+NVMM	never mind mate
 NW	no way
 NXT	next
 NYPA	not your personal army
@@ -406,6 +440,7 @@ OWTTE	or words to that effect
 PC	player character
 PC	politically correct
 PCB	polychlorinated biphenyl(s)
+PCE 	PC Engine
 PD	police department
 PDA	public display of affection
 PDQ	pretty darn quick
@@ -438,18 +473,27 @@ PPS	pulse per second (signal)
 PR	public relations
 PSA 	prostate-specific antigen
 PSA 	public service announcement
+PSX	PlayStation
 PTA	parent-teacher association
 PTO	{paid,personal} time off
 PTO	parent-teacher organization
 PTO	please turn over
 PTO	power takeoff
+PTT	push-to-talk
+PTT	post-telephone-telegraph
 PTV	parental tunnel vision
 QED	quod erat demonstrandum
 QFT	quoted for truth
+QOI	quality of information
 RA	residential advisor
+RAND	reasonable and non-discriminatory
+RCD	residual current device
 RFC	request for comments
 RFD	request for discussion
 RFE	request for enhancements
+RFI	request for information
+RFP	request for proposal
+RIF	reduction in force
 RIP	rest in peace
 RL	real life
 RLC	rod length check
@@ -460,6 +504,7 @@ ROM	rough order of magnitude
 ROI	return on investment
 ROTFL	rolling on the floor laughing
 RP	responsible person
+RPG	rocket-propelled grenade
 RR	railroad
 RSI	repetitive strain injury
 RSN	real soon now
@@ -471,17 +516,20 @@ SCNR	sorry, could not resist
 SEP	someone else's problem
 SERP	search engine results page
 SFAICT	so far as I can tell
+SGTM	sounds good to me
 SHID	slaps head in disgust
 SIMCA	sitting in my chair amused
 SITD	still in the dark
+SJW	social justice warrior
 SMAP	Soil Moisture Active Passive
 SMH	shaking my head
 SMLSFB	so many losers, so few bullets
 SMOP	simple matter of programming
+SMS	Sega Master System
 SNERT	snot-nosed egotistical rude teenager
+SNES	Super Nintendo Entertainment System
 SNMP	sorry, not my problem
 SO	significant other
-SOB	son of [a] bitch
 SOP	standard operating procedure
 SRS	serious
 SRSLY	seriously
@@ -523,6 +571,7 @@ TLA	three letter acronym
 TLA	true love always
 TLC	tender loving care
 TLDR	too long, didn't read
+TLDW	too long, didn't watch
 TM	trademark
 TM	trust me
 TMA	too many abbreviations
@@ -535,6 +584,7 @@ TNF	The NetBSD Foundation
 TOC	table of contents
 TOCTOU	time of check to time of use
 TOEFL	test of english as a foreign language
+TOFU	text over, fullquote under (in email)
 TOH	to other half
 TP	toilet paper
 TPTB	the powers that be
@@ -543,6 +593,7 @@ TTBOMK	to the best of my knowledge
 TTFN	ta ta for now
 TTM	to the moderator
 TTT	thought that too
+TTTR	time-tagged time-resolved
 TTYL	talk to you later
 TTYS	talk to you soon
 TWAIN	thing without an interesting name
@@ -552,13 +603,17 @@ TY	thank you
 TYVM	thank you very much
 U/L	upload
 UGT	universal greeting time
+UPC	Universal Product Code
 UR	your
 UR	{you're, you are}
+URM	underrepresented minority
 UTSL	use the source, Luke
 VCR	video cassette recorder
 VEG	very evil grin
 VIP	very important person
 VLA	variable length array
+VLPR	vehicle license plate recognition
+VRI	vehicle recognition identification
 W/	with
 W/E	whatever
 W/O	without
@@ -571,10 +626,14 @@ WDYMBT	what do you mean by that
 WELC	working effectively with legacy code
 WFH	working from home
 WFM	works for me
+WGACA	what goes around comes around
 WIBNI	wouldn't it be nice if
 WIP	work in progress
+WLW	women-loving women
 WMNC	watch me not care
 WOMBAT	waste of money, brain, and time
+WP	well played
+WRR	weighted round robin
 WRT	with respect to
 WTB	{waiting,want,willing} to buy
 WTF	where's the food

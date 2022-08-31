@@ -1,8 +1,8 @@
-# $NetBSD: acronyms-o.real,v 1.6 2017/11/18 08:19:21 pgoyette Exp $
+# $NetBSD: acronyms-o.real,v 1.10 2021/09/05 17:29:27 alnsn Exp $
+ACAB	all cops are bastards
 AFU	all fucked up
 AYFKM	are you fucking kidding me
 B/S	bullshit
-BSDM	bondage, sadism, dominance, and masochism
 BAMF	bad-ass motherfucker
 BFD	big fucking deal
 BFH	big fucking hammer
@@ -22,6 +22,7 @@ FSCK	fuck
 FTFA	from the fucking article
 FTFM	fuck the fuckin' manual!
 FTMFW	for the motherfucking win
+FTP	fuck the police
 FTS	fuck that shit
 FUBAR	fucked up beyond all recognition
 FYIAD	fuck you, I'm a dragon!
@@ -57,12 +58,14 @@ RTFS	read the {fine,fucking} source
 SFA	sweet fuck all
 SNAFU	situation normal, all fucked up
 SNCA	shit no one cares about
+SOB	son of [a] bitch
 SOL	shit out [of] luck
 SOS	same old shit
 STFA	search the fucking archives
 STFU	shut the fuck up
 STFW	search the fucking web
 SWFG	search with fucking Google
+TIFU	today I fucked up
 TU	tits up
 WOFTAM	waste of fucking time and money
 WTF	{what,when,where,who,why} the fuck

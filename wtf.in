@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: wtf,v 1.24 2018/03/07 08:25:43 eadler Exp $
+#	$NetBSD: wtf,v 1.25 2018/08/16 13:31:04 maya Exp $
 #
 # Public domain
 #
@@ -79,6 +79,13 @@ for i; do
 	     | sed -ne "\|^$target[[:space:]]|s|^$target[[:space:]]*||p")"
 	if [ -n "$ans" ] ; then
 		echo "$target: $ans"
+		continue
+	fi
+
+	# Try whatis(1) next
+	ans="$(whatis "$i" 2>/dev/null)"
+	if [ $? -eq 0 ]; then
+		echo "$ans" | sort -u
 		continue
 	fi
 
